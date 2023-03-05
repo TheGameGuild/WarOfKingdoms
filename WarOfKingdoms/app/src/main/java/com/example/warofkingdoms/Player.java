@@ -9,6 +9,9 @@ public class Player {
         this.energy = energy;
     }
 
+    public Player(String s) {
+    }
+
     public int getLife() {
         return life;
     }
@@ -23,6 +26,22 @@ public class Player {
 
     public void setEnergy(int energy) {
         this.energy = energy;
+    }
+
+    public boolean playCard(Card card, int position) {
+        return playCard(card, position);
+    }
+
+    public void attack(int attackerPosition, Player inactivePlayer, int defenderPosition) {
+        attack(attackerPosition, inactivePlayer, defenderPosition);
+    }
+
+    public void endTurn() {
+        endTurn();
+    }
+
+    public void startTurn() {
+        startTurn();
     }
 }
 

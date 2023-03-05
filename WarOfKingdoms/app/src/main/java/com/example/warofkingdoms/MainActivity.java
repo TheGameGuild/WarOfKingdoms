@@ -124,4 +124,41 @@ class manaSystem extends AppCompatActivity {
     public manaSystem(int i, int i1) {
     }
 }
+public class MainActivity extends AppCompatActivity {
+    private Turn turn;
+    private Player player1;
+    private Player player2;
+    private int turnNumber = 1;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Initialize the players
+        player1 = new Player("Player 1");
+        player2 = new Player("Player 2");
+
+        // Initialize the turn
+        turn = new Turn(player1, player2, turnNumber);
+    }
+
+    public void playCard(Card card, int position) {
+        // Call the playCard method of the Turn object
+        turn.playCard(card, position);
+    }
+
+    public void attack(int attackerPosition, int defenderPosition) {
+        // Call the attack method of the Turn object
+        turn.attack(attackerPosition, defenderPosition);
+    }
+
+    public void endTurn() {
+        // Call the endTurn method of the Turn object
+        turn.endTurn();
+        turnNumber++;
+        turn = new Turn(player2, player1, turnNumber);
+    }
+}
+
 
