@@ -37,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
 
     com.example.warofkingdoms.manaSystem manaSystem = new manaSystem(10, 2);
 }
+
+/**
+ * In the gameView class, we are going to create a surface view that will be used to create the loop for the game, so it runs through.
+ */
 class gameView extends SurfaceView implements Runnable {
     private Thread thread;
     private boolean isPlaying;
@@ -80,7 +84,9 @@ class gameView extends SurfaceView implements Runnable {
     }
 }
 
-
+/**
+ * In the attackMechanic class, we are going to create a surface view that will be used to create the attack mechanic, to make the cards deal damage.
+ */
 class attackMechanic extends AppCompatActivity {
     public attackMechanic(int i, int i1, int i2) {
     }
@@ -124,11 +130,18 @@ class manaSystem extends AppCompatActivity {
     public manaSystem(int i, int i1) {
     }
 }
-public class MainActivity extends AppCompatActivity {
+
+/**
+ * In the turn class, we are going to create a surface view that will be used to create the turn of a game.
+ */
+class turn extends AppCompatActivity {
     private Turn turn;
     private Player player1;
     private Player player2;
     private int turnNumber = 1;
+
+    public void Turn(Player player1, Player player2, int turnNumber) {
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

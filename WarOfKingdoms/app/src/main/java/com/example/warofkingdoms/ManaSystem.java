@@ -5,6 +5,9 @@ public class ManaSystem {
     private int currentMana;
     private int manaRegen;
 
+    /**
+     * Constructor for ManaSystem and implementation of the ManaSystem interface and mechanic.
+     */
     public ManaSystem(int maxMana, int manaRegen) {
         this.maxMana = maxMana;
         this.currentMana = maxMana;
