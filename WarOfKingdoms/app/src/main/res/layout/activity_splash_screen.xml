@@ -19,9 +19,9 @@
         android:id="@+id/imageView"
         android:layout_width="239dp"
         android:layout_height="297dp"
-        app:srcCompat="@drawable/Logo"
+        app:srcCompat="@drawable/logo"
         tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="554dp" />
+        tools:layout_editor_absoluteY="485dp" />
 
     <TextView
         android:id="@+id/textView2"
