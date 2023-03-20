@@ -9,15 +9,29 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
 
+        button = (Button) findViewById(R.id.jugarbtn);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openjuego();
+            }
+        });
+    }
+    public void openjuego(){
+        Intent intent = new Intent(this, juego.class);
+        startActivity(intent);
+    }
     Thread background = new Thread(() -> {
         try {
             // Thread sleeps
