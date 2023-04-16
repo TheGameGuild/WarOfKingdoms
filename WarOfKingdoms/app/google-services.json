@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "46758496192",
+    "project_id": "war-of-kingdoms-904b9",
+    "storage_bucket": "war-of-kingdoms-904b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46758496192:android:e8d1d1a694bd04a3546a25",
+        "android_client_info": {
+          "package_name": "easy.tuto.WarOfKingdoms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "46758496192-fh68ak6lomo6f60ahrrqmqvvghar003t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "easy.tuto.WarOfKingdoms",
+            "certificate_hash": "292d4f051c1ef52351e8ff45a84cdfbcc2866e67"
+          }
+        },
+        {
+          "client_id": "46758496192-7nt9dd44cq8j0ia3v3ods0valour4nji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDe3lc0JH2xA2jxhV5BbyuBNZKYsLXQawQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "46758496192-7nt9dd44cq8j0ia3v3ods0valour4nji.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
