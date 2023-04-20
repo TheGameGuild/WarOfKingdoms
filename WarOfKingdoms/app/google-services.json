@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:46758496192:android:e8d1d1a694bd04a3546a25",
         "android_client_info": {
-          "package_name": "easy.tuto.WarOfKingdoms"
+          "package_name": "com.example.warofkingdoms"
         }
       },
       "oauth_client": [

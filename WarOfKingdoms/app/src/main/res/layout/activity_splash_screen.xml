@@ -10,10 +10,10 @@
         android:layout_width="402dp"
         android:layout_height="681dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/logo_joc"
-        tools:layout_editor_absoluteY="-156dp" />
+        tools:layout_editor_absoluteY="-92dp" />
 
     <ImageView
         android:id="@+id/imageView"
