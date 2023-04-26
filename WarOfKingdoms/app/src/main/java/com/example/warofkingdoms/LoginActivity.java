@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,6 +23,8 @@ public class LoginActivity extends AppCompatActivity {
     EditText logemail, logpassword;
     FirebaseAuth mAuth;
 
+    TextView txtSignup;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +34,7 @@ public class LoginActivity extends AppCompatActivity {
         logemail = findViewById(R.id.logemail);
         logpassword = findViewById(R.id.logpassword);
         btnlogin = findViewById(R.id.btn_login);
+        txtSignup = findViewById(R.id.txtsignup);
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +49,17 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
+        txtSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
+
 
 
     private void loginUser(String emailUser, String passUser) {

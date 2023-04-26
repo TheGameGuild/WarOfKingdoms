@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -23,8 +24,8 @@ import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity {
 
+    TextView txtLogin;
     Button btn_registre;
-
     Button abtus_btn;
     EditText name, email, password;
     FirebaseFirestore mFirestore;
@@ -43,6 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
         password = findViewById(R.id.regpassword);
         btn_registre = findViewById(R.id.btn_register);
         abtus_btn = findViewById(R.id.abtus_btn);
+        txtLogin = findViewById(R.id.txtLogin);
 
 
         abtus_btn.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +52,15 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 openAboutus();
 
+            }
+        });
+
+        txtLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
         
