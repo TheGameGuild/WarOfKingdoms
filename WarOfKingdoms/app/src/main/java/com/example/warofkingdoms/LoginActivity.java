@@ -15,12 +15,11 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.ktx.Firebase;
 
 public class LoginActivity extends AppCompatActivity {
 
     Button btnlogin;
-    EditText email, password;
+    EditText logemail, logpassword;
     FirebaseAuth mAuth;
 
     @Override
@@ -29,15 +28,15 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
 
-        email = findViewById(R.id.email);
-        password = findViewById(R.id.password);
+        logemail = findViewById(R.id.logemail);
+        logpassword = findViewById(R.id.logpassword);
         btnlogin = findViewById(R.id.btn_login);
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String emailUser = email.getText().toString().trim();
-                String passUser = password.getText().toString().trim();
+                String emailUser = logemail.getText().toString().trim();
+                String passUser = logpassword.getText().toString().trim();
 
                 if (emailUser.isEmpty() && passUser.isEmpty()) {
                     Toast.makeText(LoginActivity.this, "Please enter your email", Toast.LENGTH_SHORT).show();
@@ -74,21 +73,3 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
