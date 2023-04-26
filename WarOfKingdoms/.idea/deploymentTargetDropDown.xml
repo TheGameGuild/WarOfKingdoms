@@ -6,12 +6,12 @@
         <type value="RUNNING_DEVICE_TARGET" />
         <deviceKey>
           <Key>
-            <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\victo\.android\avd\Pixel_2_API_29.avd" />
+            <type value="SERIAL_NUMBER" />
+            <value value="891fc0da" />
           </Key>
         </deviceKey>
       </Target>
     </runningDeviceTargetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2023-04-26T00:30:24.427541100Z" />
+    <timeTargetWasSelectedWithDropDown value="2023-04-26T15:06:06.335107400Z" />
   </component>
 </project>
