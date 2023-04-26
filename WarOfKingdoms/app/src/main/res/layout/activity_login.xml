@@ -10,10 +10,11 @@
         android:id="@+id/txtsignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="175dp"
-        android:layout_marginTop="190dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="280dp"
         android:text="Sign up"
         android:textColor="#FF0000"
+        android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,8 +23,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="190dp"
+        android:layout_marginTop="280dp"
         android:text="Don't have an account?"
+        android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,10 +65,21 @@
                 android:inputType="textPassword"
                 android:minHeight="48dp" />
 
+            <TextView
+                android:id="@+id/txtForgotPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:layout_marginTop="12dp"
+                android:textSize="16dp"
+                android:text="Forgot Password"
+                android:textColor="#FF0000" />
+
             <Button
                 android:id="@+id/btn_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
                 android:text="Login" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
