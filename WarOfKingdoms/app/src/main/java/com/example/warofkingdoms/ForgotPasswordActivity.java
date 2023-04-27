@@ -42,7 +42,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
 
         btnReset.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 strEmail = edtEmail.getText().toString().trim();
                 if (!TextUtils.isEmpty(strEmail)){
 
@@ -54,8 +54,10 @@ public class ForgotPasswordActivity extends AppCompatActivity {
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                onBackPressed();
+            public void onClick(View view) {
+                Intent intent = new Intent(ForgotPasswordActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 
@@ -69,18 +71,19 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         mAuth.sendPasswordResetEmail(strEmail).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
-                Toast.makeText(ForgotPasswordActivity.this, "Reset Password link has been sent to your registeres Email", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ForgotPasswordActivity.this, "Reset Password link has been sent to your registered Email", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(ForgotPasswordActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
 
             }
-        })      .addOnFailureListener(new OnFailureListener() {
+        })
+                .addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(ForgotPasswordActivity.this, "Error :- " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                progressBar.setVisibility(View.INVISIBLE);
-                btnReset.setVisibility(View.VISIBLE);
+                progressBar.setVisibility(View.VISIBLE);
+                btnReset.setVisibility(View.INVISIBLE);
             }
         });
     }
