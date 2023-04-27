@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.AuthResult;
 
 public class ForgotPasswordActivity extends AppCompatActivity {
 
@@ -44,7 +45,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 strEmail = edtEmail.getText().toString().trim();
-                if (!TextUtils.isEmpty(strEmail)){
+                if(!TextUtils.isEmpty(strEmail)) {
 
                 }else {
                     edtEmail.setError("Email field can't be empty");
@@ -62,8 +63,6 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         });
 
     }
-
-
     private void ResetPassword(){
         progressBar.setVisibility(View.VISIBLE);
         btnReset.setVisibility(View.INVISIBLE);
@@ -77,14 +76,16 @@ public class ForgotPasswordActivity extends AppCompatActivity {
                 finish();
 
             }
-        })
-                .addOnFailureListener(new OnFailureListener() {
+        }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(ForgotPasswordActivity.this, "Error :- " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                progressBar.setVisibility(View.VISIBLE);
-                btnReset.setVisibility(View.INVISIBLE);
+                progressBar.setVisibility(View.INVISIBLE);
+                btnReset.setVisibility(View.VISIBLE);
             }
         });
     }
+
+
+
 }
