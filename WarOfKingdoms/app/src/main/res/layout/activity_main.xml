@@ -42,7 +42,14 @@
 
 
 
-
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            app:fabCradleMargin="10dp"
+            app:fabCradleRoundedCornerRadius="50dp">
 
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/bottomNavigationView"
@@ -53,7 +60,7 @@
                 app:labelVisibilityMode="labeled"
                 app:menu="@menu/bottom_menu" />
 
-
+        </com.google.android.material.bottomappbar.BottomAppBar>
 
 
 

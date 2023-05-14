@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/tienda"
+        android:title="Tienda"
+        android:icon="@drawable/baseline_shop_24"
+        />
+
+    <item
+        android:id="@+id/colección"
+        android:title="Colección"
+        android:icon="@drawable/cartas" />
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/baseline_home_24"/>
+
+    <item
+        android:id="@+id/clanes"
+        android:title="Clanes"
+        android:icon="@drawable/baseline_castle_24"/>
+
+</menu>
