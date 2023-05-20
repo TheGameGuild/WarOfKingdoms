@@ -40,22 +40,29 @@ public class Carta {
         System.out.println("Puntos de Vida: " + dragon.getPuntosVida());
 
 
-        Carta caballero = new Carta("Caballero", 3, 4, 10);
+        Carta guerrero = new Carta("Guerrero", 3, 4, 10);
 
-        System.out.println("Nombre: " + caballero.getNombre());
-        System.out.println("Costo de Elixir: " + caballero.getCostoElixir());
-        System.out.println("Poder de Ataque: " + caballero.getPoderAtaque());
-        System.out.println("Puntos de Vida: " + caballero.getPuntosVida());
+        System.out.println("Nombre: " + guerrero.getNombre());
+        System.out.println("Costo de Elixir: " + guerrero.getCostoElixir());
+        System.out.println("Poder de Ataque: " + guerrero.getPoderAtaque());
+        System.out.println("Puntos de Vida: " + guerrero.getPuntosVida());
 
 
-        Carta lobo = new Carta("Lobo", 6, 7, 6);
+        Carta tigre = new Carta("Tigre", 6, 7, 6);
 
-        System.out.println("Nombre: " + lobo.getNombre());
-        System.out.println("Costo de Elixir: " + lobo.getCostoElixir());
-        System.out.println("Poder de Ataque: " + lobo.getPoderAtaque());
-        System.out.println("Puntos de Vida: " + lobo.getPuntosVida());
+        System.out.println("Nombre: " + tigre.getNombre());
+        System.out.println("Costo de Elixir: " + tigre.getCostoElixir());
+        System.out.println("Poder de Ataque: " + tigre.getPoderAtaque());
+        System.out.println("Puntos de Vida: " + tigre.getPuntosVida());
+
+        Carta rey = new Carta("El Rey", 7, 8,7 );
+
+        System.out.println("Nombre: " + rey.getNombre());
+        System.out.println("Costo de Elixir: " + rey.getCostoElixir());
+        System.out.println("Poder de Ataque: " + rey.getPoderAtaque());
+        System.out.println("Puntos de Vida: " + rey.getPuntosVida());
 
     }
 }
 
-//Doubt: At the moment the system.out.printlns are for testing. Might need to use setters to implement the stats.
+//Doubt: At the moment the system.out.printlns are for testing. Might need to use setters to implement the stats??

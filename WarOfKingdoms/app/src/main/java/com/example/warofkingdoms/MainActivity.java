@@ -23,15 +23,32 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     BottomNavigationView bottomNavigationView;
 
+    Button btn_jugar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        btn_jugar = findViewById(R.id.btn_jugar);
+        //Toolbar toolbar = findViewById(R.id.toolbar);
 
+
+
+        btn_jugar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Partida.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
+
+
+
 }
