@@ -28,7 +28,7 @@ public class Player {
         this.energy = energy;
     }
 
-    public boolean playCard(Card card, int position) {
+    public boolean playCard(Carta card, int position) {
         return playCard(card, position);
     }
 

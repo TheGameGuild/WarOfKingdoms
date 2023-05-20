@@ -49,7 +49,7 @@ public class Turn {
         turn.detener();
     }
 
-    public void playCard(Card card, int position) {
+    public void playCard(Carta card, int position) {
         if (activePlayer.playCard(card, position)) {
             // Card was played successfully
         } else {
