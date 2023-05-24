@@ -10,13 +10,13 @@
         />
 
     <item
-        android:id="@+id/colección"
-        android:title="Colección"
+        android:id="@+id/coleccion"
+        android:title="Coleccion"
         android:icon="@drawable/cartas" />
 
     <item
         android:id="@+id/home"
-        android:title="Home"
+        android:title="Inicio"
         android:icon="@drawable/baseline_home_24"/>
 
     <item

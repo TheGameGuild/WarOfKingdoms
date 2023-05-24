@@ -64,5 +64,3 @@ public class Carta {
 
     }
 }
-
-//Doubt: At the moment the system.out.printlns are for testing. Might need to use setters to implement the stats??
