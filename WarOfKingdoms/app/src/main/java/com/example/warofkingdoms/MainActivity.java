@@ -44,14 +44,14 @@ public class MainActivity extends AppCompatActivity {
 
             switch (item.getItemId()){
 
-                case R.id.tienda:
-                    replaceFragment(new ShopFragment());
+                case R.id.home:
+                    replaceFragment(new HomeFragment());
                     break;
                 case R.id.coleccion:
                     replaceFragment(new ColectionFragment());
                     break;
-                case R.id.home:
-                    replaceFragment(new HomeFragment());
+                case R.id.tienda:
+                    replaceFragment(new ShopFragment());
                     break;
                 case R.id.clanes:
                     replaceFragment(new ClansFragment());
