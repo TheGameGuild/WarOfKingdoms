@@ -17,11 +17,14 @@ import java.util.List;
 public class Partida extends AppCompatActivity {
 
     private List<Carta> itemList;
+    private TextView vidaEnemiga;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_partida);
+        vidaEnemiga = findViewById(R.id.vida_enemiga);
 
         LinearLayout linearLayout = findViewById(R.id.linearLayoutCards);
 
@@ -70,9 +73,16 @@ public class Partida extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //Card action to be implemented
-                Toast.makeText(Partida.this, "Jugando Carta", Toast.LENGTH_SHORT).show();
+                int ataqueCarta = carta.getPoderAtaque();
+                int numeroTextView = Integer.parseInt(vidaEnemiga.getText().toString());
+                if (ataqueCarta > numeroTextView) {
+                    Toast.makeText(Partida.this, "¡Victoria!", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(Partida.this, "Derrota", Toast.LENGTH_SHORT).show();
+                }
             }
         });
+
 
         //Config the No button
         builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
