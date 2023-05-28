@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -76,10 +77,28 @@ public class Partida extends AppCompatActivity {
                 int ataqueCarta = carta.getPoderAtaque();
                 int numeroTextView = Integer.parseInt(vidaEnemiga.getText().toString());
                 if (ataqueCarta > numeroTextView) {
-                    Toast.makeText(Partida.this, "¡Victoria!", Toast.LENGTH_SHORT).show();
+                    showDialog("Has ganado");
                 } else {
-                    Toast.makeText(Partida.this, "Derrota", Toast.LENGTH_SHORT).show();
+                    showDialog("Has perdido");
                 }
+            }
+
+            private void showDialog(String message) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(Partida.this);
+                builder.setMessage(message)
+                        .setCancelable(false)
+                        .setPositiveButton("Volver al menú principal", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                Intent intent = new Intent(Partida.this, MainActivity.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                                startActivity(intent);
+                                finish();
+
+                            }
+                        });
+
+                AlertDialog alert = builder.create();
+                alert.show();
             }
         });
 
