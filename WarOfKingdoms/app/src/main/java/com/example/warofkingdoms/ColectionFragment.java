@@ -20,10 +20,7 @@ public class ColectionFragment extends Fragment {
     CardView arquero;
 
 
-    //@Override
-    //protected void onCreate(Bundle savedInstanceState){
-        //super.onCreate(savedInstanceState);
-        //setContentView(R.layout.fragment_colection);
+
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
