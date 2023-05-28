@@ -73,7 +73,7 @@ public class Partida extends AppCompatActivity {
         builder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                //Card action to be implemented
+                // create win and lose scenario
                 int ataqueCarta = carta.getPoderAtaque();
                 int numeroTextView = Integer.parseInt(vidaEnemiga.getText().toString());
                 if (ataqueCarta > numeroTextView) {
