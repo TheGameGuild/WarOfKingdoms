@@ -17,3 +17,6 @@
 4           3.4       T.4.1-T.4.5       2          0                    2                         Everything is done as is marked.
 
 6           3.3       TX                8          2                    6                         We've implementated new aspects like, fragments and recyclerview.      
+
+
+In the raw file of githu is shown correctly
