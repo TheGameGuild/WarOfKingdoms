@@ -77,9 +77,9 @@ public class Partida extends AppCompatActivity {
                 int ataqueCarta = carta.getPoderAtaque();
                 int numeroTextView = Integer.parseInt(vidaEnemiga.getText().toString());
                 if (ataqueCarta > numeroTextView) {
-                    showDialog("Has ganado");
+                    showDialog("Enhorabuena, Has Ganado!");
                 } else {
-                    showDialog("Has perdido");
+                    showDialog("Por Poco, Has Perdido!");
                 }
             }
 
