@@ -31,22 +31,18 @@ public class ForgotPasswordActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
-
-
-
         btnBack = findViewById(R.id.btnForgotPasswordBack);
         btnReset = findViewById(R.id.btnReset);
         edtEmail = findViewById(R.id.edtForgotPasswordEmail);
         progressBar = findViewById(R.id.edtForgotPasswordProgressbar);
-
         mAuth = FirebaseAuth.getInstance();
 
         btnReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                strEmail = edtEmail.getText().toString().trim();
+                 strEmail = edtEmail.getText().toString().trim();
                 if(!TextUtils.isEmpty(strEmail)) {
-
+                    ResetPassword();
                 }else {
                     edtEmail.setError("Email field can't be empty");
                 }
