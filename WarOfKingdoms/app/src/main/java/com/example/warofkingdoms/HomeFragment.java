@@ -52,7 +52,11 @@ public class HomeFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
+
         }
+        Button btnjugar = getActivity().findViewById(R.id.btn_jugar);
+        btnjugar.setVisibility(View.VISIBLE);
     }
 
     @Override
